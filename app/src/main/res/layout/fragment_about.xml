@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".fragments.AboutFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="@color/row_background"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/priority_indicator"
+                android:layout_width="170dp"
+                android:layout_height="168dp"
+                app:cardBackgroundColor="@color/profile_white"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.173">
+
+                <ImageView
+                    android:id="@+id/imageViewProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+
+                    android:src="@drawable/profile" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/merienda_one"
+                android:text="@string/rahul_chaurasiya"
+                android:textColor="@color/lightGrey"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/priority_indicator"
+                app:layout_constraintStart_toStartOf="@+id/priority_indicator"
+                app:layout_constraintTop_toBottomOf="@+id/priority_indicator" />
+
+            <TextView
+                android:id="@+id/tvProfileDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/amaranth_italic"
+                android:text="@string/android_developer_programmer"
+                android:textColor="@color/lightGrey"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvProfileName"
+                app:layout_constraintStart_toStartOf="@+id/tvProfileName"
+                app:layout_constraintTop_toBottomOf="@+id/tvProfileName" />
+
+
+            <ImageView
+                android:id="@+id/imageViewGithub"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="32dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/github"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewTwitter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/textContactMe" />
+
+            <ImageView
+                android:id="@+id/imageViewInsta"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/instagram"
+                app:layout_constraintEnd_toEndOf="@+id/textContactMe"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageViewFacebook"
+                app:layout_constraintTop_toTopOf="@+id/imageViewFacebook" />
+
+            <ImageView
+                android:id="@+id/imageViewTwitter"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/twitter"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewFacebook"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGithub"
+                app:layout_constraintTop_toTopOf="@+id/imageViewGithub" />
+
+            <ImageView
+                android:id="@+id/imageViewFacebook"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="openFacebook"
+                android:src="@drawable/facebook"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewInsta"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageViewTwitter"
+                app:layout_constraintTop_toTopOf="@+id/imageViewTwitter"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvAnime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/chivo"
+                android:gravity="center"
+                android:text="Love Anime as much as I do?"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textContactMe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textContactMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/merienda_one"
+                android:text="Let's Talk About How Awesome They Are."
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewTwitter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/row_background"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvCredits"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/chivo"
+                android:text="Credits"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/listingIcon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCreditFlatIcon"
+                app:layout_constraintStart_toStartOf="@+id/tvCredits"
+                app:layout_constraintTop_toTopOf="@+id/tvCreditFlatIcon" />
+
+            <TextView
+                android:id="@+id/tvCreditFlatIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/amaranth_italic"
+                android:text="FlatIcons"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/listingIcon"
+                app:layout_constraintTop_toBottomOf="@+id/tvCredits" />
+
+            <TextView
+                android:id="@+id/tvCreditAnimator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/amaranth_italic"
+                android:text="wasabeef"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/listingIcon2"
+                app:layout_constraintTop_toBottomOf="@+id/tvCreditFlatIcon" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/amaranth_italic"
+                android:text="  for Social Media Icons"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCreditFlatIcon"
+                app:layout_constraintTop_toTopOf="@+id/tvCreditFlatIcon" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/amaranth_italic"
+                android:text="  for RecyclerView Animator"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCreditAnimator"
+                app:layout_constraintTop_toTopOf="@+id/tvCreditAnimator" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/listingIcon2"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCreditAnimator"
+                app:layout_constraintStart_toStartOf="@+id/tvCredits"
+                app:layout_constraintTop_toTopOf="@+id/tvCreditAnimator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
